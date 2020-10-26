@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/Programming/C/common-functions/array-util.c
+stdlib.h
+-
+stdio.h
+-
+common-functions.h
+F:/Programming/C/common-functions/common-functions.h
+
+F:/Programming/C/common-functions/common-functions.h
+

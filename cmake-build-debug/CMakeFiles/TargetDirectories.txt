@@ -1,0 +1,3 @@
+F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/common-functions.dir
+F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
