@@ -1,15 +1,65 @@
 #ifndef COMMON_FUNCTIONS_SCAN_UTIL_H
 #define COMMON_FUNCTIONS_SCAN_UTIL_H
 
-typedef struct ArrInt {
+typedef struct arr_bool {
+    int* arr;
+    int size;
+} arr_bool;
+
+typedef struct matrix_bool {
+    arr_bool* arr;
+    int size;
+} matrix_bool;
+
+typedef struct arr_char{
+    char* arr;
+    int size;
+} arr_char;
+
+typedef struct arr_string {
+    char** arr;
+    int size;
+} arr_string;
+
+typedef struct arr_int {
     int* arr;
     int size;
 } arr_int;
 
-typedef struct ArrFloat {
-    float* arr;
+typedef struct arr_long {
+    long long* arr;
     int size;
-} arr_float;
+} arr_long;
+
+typedef struct arr_double {
+    double* arr;
+    int size;
+} arr_double;
+
+typedef struct matrix_char {
+    arr_char* arr;
+    int size;
+} matrix_char;
+
+typedef struct matrix_string {
+    arr_string* arr;
+    int size;
+} matrix_string;
+
+typedef struct matrix_int {
+    arr_int* arr;
+    int size;
+} matrix_int;
+
+typedef struct matrix_long {
+    arr_long* arr;
+    int size;
+} matrix_long;
+
+typedef struct matrix_double {
+    arr_double* arr;
+    int size;
+} matrix_double;
 
 short int scanShortInt();
 
@@ -35,10 +85,16 @@ void printIntArr(arr_int arrInt);
 
 void freeIntArr(arr_int arrInt);
 
-arr_float scanFloatArr(int length);
+arr_double scanDoubleArr(int length);
 
-void printFloatArr(arr_float arrFloat);
+void printDoubleArr(arr_double arrFloat);
 
-void freeFloatArr(arr_float arrFloat);
+void freeDoubleArr(arr_double arrFloat);
+
+arr_string scanStringArr(int length);
+
+void printStringArr(arr_string arrString);
+
+void freeStringArr(arr_string arrString);
 
 #endif //COMMON_FUNCTIONS_SCAN_UTIL_H

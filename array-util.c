@@ -32,8 +32,8 @@ void freeIntArr(arr_int arrInt) {
     free(arrInt.arr);
 }
 
-arr_float scanFloatArr(int length) {
-    arr_float arrFloat = {calloc(length, sizeof(float)), length };
+arr_double scanDoubleArr(int length) {
+    arr_double arrFloat = {calloc(length, sizeof(float)), length };
     printf(">>> Start input array of floats:\n");
     char tempStr[256];
 
@@ -46,7 +46,7 @@ arr_float scanFloatArr(int length) {
     return arrFloat;
 }
 
-void printFloatArr(arr_float arrFloat) {
+void printDoubleArr(arr_double arrFloat) {
     printf("[");
     for (int i = 0; i < arrFloat.size; ++i) {
         if (i == arrFloat.size - 1) {
@@ -58,7 +58,40 @@ void printFloatArr(arr_float arrFloat) {
     printf("]");
 }
 
-void freeFloatArr(arr_float arrFloat) {
+void freeDoubleArr(arr_double arrFloat) {
     free(arrFloat.arr);
 }
+
+arr_string scanStringArr(int length) {
+    arr_string arrString = {calloc(length, sizeof(char*)), length };
+    printf(">>> Start input array of floats:\n");
+    char tempStr[512];
+    for (int i = 0; i < length; ++i) {
+        printf("- Enter element #%d:\n", i);
+        scanf("%s", tempStr);
+        arrString.arr[i] = tempStr;
+    }
+    printf("<<< End input array of floats.\n");
+    return arrString;
+}
+
+void printStringArr(arr_string arrString) {
+    printf("[");
+    for (int i = 0; i < arrString.size; ++i) {
+        if (i == arrString.size - 1) {
+            printf("%s", arrString.arr[i]);
+        } else {
+            printf("%s, ", arrString.arr[i]);
+        }
+    }
+    printf("]");
+}
+
+void freeStringArr(arr_string arrString) {
+    for (int i = 0; i < arrString.size; ++i) {
+        free(arrString.arr[i]);
+    }
+    free(arrString.arr);
+}
+
 
