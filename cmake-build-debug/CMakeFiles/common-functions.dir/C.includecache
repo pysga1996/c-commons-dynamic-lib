@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-F:/Programming/C/common-functions/array-util.c
+F:/Programming/C/common-functions/common-functions.h
+stdio.h
+-
+
+F:/Programming/C/common-functions/file-util.c
 stdlib.h
+-
+errno.h
 -
 stdio.h
 -
 common-functions.h
-F:/Programming/C/common-functions/common-functions.h
-
 F:/Programming/C/common-functions/common-functions.h
 

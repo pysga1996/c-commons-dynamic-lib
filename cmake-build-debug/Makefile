@@ -149,6 +149,87 @@ array-util.c.s:
 	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/array-util.c.s
 .PHONY : array-util.c.s
 
+constants.obj: constants.c.obj
+
+.PHONY : constants.obj
+
+# target to build an object file
+constants.c.obj:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/constants.c.obj
+.PHONY : constants.c.obj
+
+constants.i: constants.c.i
+
+.PHONY : constants.i
+
+# target to preprocess a source file
+constants.c.i:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/constants.c.i
+.PHONY : constants.c.i
+
+constants.s: constants.c.s
+
+.PHONY : constants.s
+
+# target to generate assembly for a file
+constants.c.s:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/constants.c.s
+.PHONY : constants.c.s
+
+file-util.obj: file-util.c.obj
+
+.PHONY : file-util.obj
+
+# target to build an object file
+file-util.c.obj:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/file-util.c.obj
+.PHONY : file-util.c.obj
+
+file-util.i: file-util.c.i
+
+.PHONY : file-util.i
+
+# target to preprocess a source file
+file-util.c.i:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/file-util.c.i
+.PHONY : file-util.c.i
+
+file-util.s: file-util.c.s
+
+.PHONY : file-util.s
+
+# target to generate assembly for a file
+file-util.c.s:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/file-util.c.s
+.PHONY : file-util.c.s
+
+number-util.obj: number-util.c.obj
+
+.PHONY : number-util.obj
+
+# target to build an object file
+number-util.c.obj:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/number-util.c.obj
+.PHONY : number-util.c.obj
+
+number-util.i: number-util.c.i
+
+.PHONY : number-util.i
+
+# target to preprocess a source file
+number-util.c.i:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/number-util.c.i
+.PHONY : number-util.c.i
+
+number-util.s: number-util.c.s
+
+.PHONY : number-util.s
+
+# target to generate assembly for a file
+number-util.c.s:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/number-util.c.s
+.PHONY : number-util.c.s
+
 scan-util.obj: scan-util.c.obj
 
 .PHONY : scan-util.obj
@@ -176,6 +257,33 @@ scan-util.c.s:
 	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/scan-util.c.s
 .PHONY : scan-util.c.s
 
+string-util.obj: string-util.c.obj
+
+.PHONY : string-util.obj
+
+# target to build an object file
+string-util.c.obj:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/string-util.c.obj
+.PHONY : string-util.c.obj
+
+string-util.i: string-util.c.i
+
+.PHONY : string-util.i
+
+# target to preprocess a source file
+string-util.c.i:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/string-util.c.i
+.PHONY : string-util.c.i
+
+string-util.s: string-util.c.s
+
+.PHONY : string-util.s
+
+# target to generate assembly for a file
+string-util.c.s:
+	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/string-util.c.s
+.PHONY : string-util.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -188,9 +296,21 @@ help:
 	@echo ... array-util.obj
 	@echo ... array-util.i
 	@echo ... array-util.s
+	@echo ... constants.obj
+	@echo ... constants.i
+	@echo ... constants.s
+	@echo ... file-util.obj
+	@echo ... file-util.i
+	@echo ... file-util.s
+	@echo ... number-util.obj
+	@echo ... number-util.i
+	@echo ... number-util.s
 	@echo ... scan-util.obj
 	@echo ... scan-util.i
 	@echo ... scan-util.s
+	@echo ... string-util.obj
+	@echo ... string-util.i
+	@echo ... string-util.s
 .PHONY : help
 
 

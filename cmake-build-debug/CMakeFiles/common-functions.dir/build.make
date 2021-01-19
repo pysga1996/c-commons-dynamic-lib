@@ -82,21 +82,81 @@ CMakeFiles/common-functions.dir/array-util.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/common-functions.dir/array-util.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Programming\C\common-functions\array-util.c -o CMakeFiles\common-functions.dir\array-util.c.s
 
+CMakeFiles/common-functions.dir/string-util.c.obj: CMakeFiles/common-functions.dir/flags.make
+CMakeFiles/common-functions.dir/string-util.c.obj: ../string-util.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/common-functions.dir/string-util.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\common-functions.dir\string-util.c.obj   -c F:\Programming\C\common-functions\string-util.c
+
+CMakeFiles/common-functions.dir/string-util.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/common-functions.dir/string-util.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Programming\C\common-functions\string-util.c > CMakeFiles\common-functions.dir\string-util.c.i
+
+CMakeFiles/common-functions.dir/string-util.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/common-functions.dir/string-util.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Programming\C\common-functions\string-util.c -o CMakeFiles\common-functions.dir\string-util.c.s
+
+CMakeFiles/common-functions.dir/number-util.c.obj: CMakeFiles/common-functions.dir/flags.make
+CMakeFiles/common-functions.dir/number-util.c.obj: ../number-util.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/common-functions.dir/number-util.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\common-functions.dir\number-util.c.obj   -c F:\Programming\C\common-functions\number-util.c
+
+CMakeFiles/common-functions.dir/number-util.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/common-functions.dir/number-util.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Programming\C\common-functions\number-util.c > CMakeFiles\common-functions.dir\number-util.c.i
+
+CMakeFiles/common-functions.dir/number-util.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/common-functions.dir/number-util.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Programming\C\common-functions\number-util.c -o CMakeFiles\common-functions.dir\number-util.c.s
+
+CMakeFiles/common-functions.dir/constants.c.obj: CMakeFiles/common-functions.dir/flags.make
+CMakeFiles/common-functions.dir/constants.c.obj: ../constants.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/common-functions.dir/constants.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\common-functions.dir\constants.c.obj   -c F:\Programming\C\common-functions\constants.c
+
+CMakeFiles/common-functions.dir/constants.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/common-functions.dir/constants.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Programming\C\common-functions\constants.c > CMakeFiles\common-functions.dir\constants.c.i
+
+CMakeFiles/common-functions.dir/constants.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/common-functions.dir/constants.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Programming\C\common-functions\constants.c -o CMakeFiles\common-functions.dir\constants.c.s
+
+CMakeFiles/common-functions.dir/file-util.c.obj: CMakeFiles/common-functions.dir/flags.make
+CMakeFiles/common-functions.dir/file-util.c.obj: ../file-util.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/common-functions.dir/file-util.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\common-functions.dir\file-util.c.obj   -c F:\Programming\C\common-functions\file-util.c
+
+CMakeFiles/common-functions.dir/file-util.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/common-functions.dir/file-util.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Programming\C\common-functions\file-util.c > CMakeFiles\common-functions.dir\file-util.c.i
+
+CMakeFiles/common-functions.dir/file-util.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/common-functions.dir/file-util.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Programming\C\common-functions\file-util.c -o CMakeFiles\common-functions.dir\file-util.c.s
+
 # Object files for target common-functions
 common__functions_OBJECTS = \
 "CMakeFiles/common-functions.dir/scan-util.c.obj" \
-"CMakeFiles/common-functions.dir/array-util.c.obj"
+"CMakeFiles/common-functions.dir/array-util.c.obj" \
+"CMakeFiles/common-functions.dir/string-util.c.obj" \
+"CMakeFiles/common-functions.dir/number-util.c.obj" \
+"CMakeFiles/common-functions.dir/constants.c.obj" \
+"CMakeFiles/common-functions.dir/file-util.c.obj"
 
 # External object files for target common-functions
 common__functions_EXTERNAL_OBJECTS =
 
 libcommon-functions.dll: CMakeFiles/common-functions.dir/scan-util.c.obj
 libcommon-functions.dll: CMakeFiles/common-functions.dir/array-util.c.obj
+libcommon-functions.dll: CMakeFiles/common-functions.dir/string-util.c.obj
+libcommon-functions.dll: CMakeFiles/common-functions.dir/number-util.c.obj
+libcommon-functions.dll: CMakeFiles/common-functions.dir/constants.c.obj
+libcommon-functions.dll: CMakeFiles/common-functions.dir/file-util.c.obj
 libcommon-functions.dll: CMakeFiles/common-functions.dir/build.make
 libcommon-functions.dll: CMakeFiles/common-functions.dir/linklibs.rsp
 libcommon-functions.dll: CMakeFiles/common-functions.dir/objects1.rsp
 libcommon-functions.dll: CMakeFiles/common-functions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libcommon-functions.dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libcommon-functions.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\common-functions.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

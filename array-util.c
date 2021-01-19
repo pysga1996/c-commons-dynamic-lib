@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "common-functions.h"
+#define DEFAULT_CAPACITY 50
 
 arr_int scanIntArr(int length) {
     arr_int arrInt = { calloc(length, sizeof(int)), length };
@@ -64,14 +66,13 @@ void freeDoubleArr(arr_double arrFloat) {
 
 arr_string scanStringArr(int length) {
     arr_string arrString = {calloc(length, sizeof(char*)), length };
-    printf(">>> Start input array of floats:\n");
-    char tempStr[512];
+    printf(">>> Start input array of strings:\n");
     for (int i = 0; i < length; ++i) {
+        (arrString.arr)[i] = calloc(sizeof(char), 512);
         printf("- Enter element #%d:\n", i);
-        scanf("%s", tempStr);
-        arrString.arr[i] = tempStr;
+        scanf("%s", (arrString.arr)[i]);
     }
-    printf("<<< End input array of floats.\n");
+    printf("<<< End input array of strings.\n");
     return arrString;
 }
 
@@ -92,6 +93,28 @@ void freeStringArr(arr_string arrString) {
         free(arrString.arr[i]);
     }
     free(arrString.arr);
+}
+
+arr_char* createString() {
+    arr_char* arrString = malloc(sizeof(arr_char));
+    *arrString = (arr_char) {calloc(DEFAULT_CAPACITY, sizeof(char)), DEFAULT_CAPACITY };
+    return arrString;
+}
+
+void concatString(arr_char* aChar, char* characters) {
+    unsigned long long currentLength = strlen(aChar->content);
+    unsigned long long appendixLength = strlen(characters);
+    unsigned long long newLength = (currentLength + appendixLength);
+    if (newLength > aChar->length) {
+        aChar->content = realloc(aChar->content, newLength * sizeof(char) + 1);
+        aChar->length = newLength;
+    }
+    strcat(aChar->content, characters);
+}
+
+void deleteString(arr_char* aChar) {
+    free(aChar->content);
+    free(aChar);
 }
 
 

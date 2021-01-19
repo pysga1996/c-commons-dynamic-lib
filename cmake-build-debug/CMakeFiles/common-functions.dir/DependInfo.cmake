@@ -5,7 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "F:/Programming/C/common-functions/array-util.c" "F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/common-functions.dir/array-util.c.obj"
+  "F:/Programming/C/common-functions/constants.c" "F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/common-functions.dir/constants.c.obj"
+  "F:/Programming/C/common-functions/file-util.c" "F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/common-functions.dir/file-util.c.obj"
+  "F:/Programming/C/common-functions/number-util.c" "F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/common-functions.dir/number-util.c.obj"
   "F:/Programming/C/common-functions/scan-util.c" "F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/common-functions.dir/scan-util.c.obj"
+  "F:/Programming/C/common-functions/string-util.c" "F:/Programming/C/common-functions/cmake-build-debug/CMakeFiles/common-functions.dir/string-util.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

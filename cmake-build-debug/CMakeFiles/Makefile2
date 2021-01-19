@@ -73,12 +73,12 @@ clean: CMakeFiles/common-functions.dir/clean
 CMakeFiles/common-functions.dir/all:
 	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/depend
 	$(MAKE) -f CMakeFiles\common-functions.dir\build.make CMakeFiles/common-functions.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target common-functions"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target common-functions"
 .PHONY : CMakeFiles/common-functions.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/common-functions.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles 7
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/common-functions.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\Programming\C\common-functions\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/common-functions.dir/rule

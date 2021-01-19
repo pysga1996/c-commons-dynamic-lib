@@ -80,7 +80,19 @@
 		<Unit filename="F:/Programming/C/common-functions/common-functions.h">
 			<Option target="common-functions"/>
 		</Unit>
+		<Unit filename="F:/Programming/C/common-functions/constants.c">
+			<Option target="common-functions"/>
+		</Unit>
+		<Unit filename="F:/Programming/C/common-functions/file-util.c">
+			<Option target="common-functions"/>
+		</Unit>
+		<Unit filename="F:/Programming/C/common-functions/number-util.c">
+			<Option target="common-functions"/>
+		</Unit>
 		<Unit filename="F:/Programming/C/common-functions/scan-util.c">
+			<Option target="common-functions"/>
+		</Unit>
+		<Unit filename="F:/Programming/C/common-functions/string-util.c">
 			<Option target="common-functions"/>
 		</Unit>
 		<Unit filename="F:/Programming/C/common-functions/CMakeLists.txt">
