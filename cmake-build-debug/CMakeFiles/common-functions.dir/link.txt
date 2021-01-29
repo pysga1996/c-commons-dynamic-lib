@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\common-functions.dir/objects.a
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\common-functions.dir/objects.a @CMakeFiles\common-functions.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  -g  -shared -o libcommon-functions.dll -Wl,--out-implib,libcommon-functions.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\common-functions.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\common-functions.dir\linklibs.rsp
