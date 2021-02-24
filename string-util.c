@@ -37,17 +37,17 @@ arr_char* createString() {
 }
 
 void concatString(arr_char* aChar, char* characters) {
-    unsigned long long currentLength = strlen(aChar->content);
+    unsigned long long currentLength = strlen(aChar->arr);
     unsigned long long appendixLength = strlen(characters);
     unsigned long long newLength = (currentLength + appendixLength);
-    if (newLength > aChar->length) {
-        aChar->content = realloc(aChar->content, newLength * sizeof(char) + 1);
-        aChar->length = newLength;
+    if (newLength > aChar->size) {
+        aChar->arr = realloc(aChar->arr, newLength * sizeof(char) + 1);
+        aChar->size = newLength;
     }
-    strcat(aChar->content, characters);
+    strcat(aChar->arr, characters);
 }
 
 void deleteString(arr_char* aChar) {
-    free(aChar->content);
+    free(aChar->arr);
     free(aChar);
 }

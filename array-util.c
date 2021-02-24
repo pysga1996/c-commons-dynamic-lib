@@ -178,7 +178,7 @@ matrix_bool* scantBoolMatrix(int numberOfRows, int numberOfColumns) {
     printf(">>> Start input matrix of booleans:\n");
     for (int i = 0; i < numberOfRows; ++i) {
         printf("- Start enter row #%d:\n", i);
-        scanIntArr(numberOfColumns);
+        matrixBool->arr[i] = *scanBoolArr(numberOfColumns);
         printf("- Finish enter row #%d:\n", i);
     }
     printf("<<< End input matrix of booleans.\n");
@@ -188,17 +188,17 @@ matrix_bool* scantBoolMatrix(int numberOfRows, int numberOfColumns) {
 void printBoolMatrix(matrix_bool* matrixBool) {
     printf("[");
     for (int i = 0; i < matrixBool->size; ++i) {
+        printBoolArr(&matrixBool->arr[i]);
         if (i < matrixBool->size - 1) {
             printf(",\n");
         }
-        printBoolArr(&matrixBool->arr[i]);
     }
     printf("]");
 }
 
 void freeBoolMatrix(matrix_bool* matrixBool) {
     for (int i = 0; i < matrixBool->size; ++i) {
-        freeBoolArr(&matrixBool->arr[i]);
+        free(matrixBool->arr[i].arr);
     }
     free(matrixBool->arr);
     free(matrixBool);
@@ -211,7 +211,7 @@ matrix_int* scantIntMatrix(int numberOfRows, int numberOfColumns) {
     printf(">>> Start input matrix of integers:\n");
     for (int i = 0; i < numberOfRows; ++i) {
         printf("- Start enter row #%d:\n", i);
-        scanIntArr(numberOfColumns);
+        matrixInt->arr[i] = *scanIntArr(numberOfColumns);
         printf("- Finish enter row #%d:\n", i);
     }
     printf("<<< End input matrix of integers.\n");
@@ -221,17 +221,17 @@ matrix_int* scantIntMatrix(int numberOfRows, int numberOfColumns) {
 void printIntMatrix(matrix_int* matrixInt) {
     printf("[");
     for (int i = 0; i < matrixInt->size; ++i) {
+        printIntArr(&matrixInt->arr[i]);
         if (i < matrixInt->size - 1) {
             printf(",\n");
         }
-        printIntArr(&matrixInt->arr[i]);
     }
     printf("]");
 }
 
 void freeIntMatrix(matrix_int* matrixInt) {
     for (int i = 0; i < matrixInt->size; ++i) {
-        freeIntArr(&matrixInt->arr[i]);
+        free(matrixInt->arr[i].arr);
     }
     free(matrixInt->arr);
     free(matrixInt);
@@ -245,7 +245,7 @@ matrix_double* scantDoubleMatrix(int numberOfRows, int numberOfColumns) {
 
     for (int i = 0; i < numberOfRows; ++i) {
         printf("- Start enter row #%d:\n", i);
-        scanIntArr(numberOfColumns);
+        matrixDouble->arr[i] = *scanDoubleArr(numberOfColumns);
         printf("- Finish enter row #%d:\n", i);
     }
     printf("<<< End input matrix of doubles.\n");
@@ -255,17 +255,17 @@ matrix_double* scantDoubleMatrix(int numberOfRows, int numberOfColumns) {
 void printDoubleMatrix(matrix_double* matrixDouble) {
     printf("[");
     for (int i = 0; i < matrixDouble->size; ++i) {
+        printDoubleArr(&matrixDouble->arr[i]);
         if (i < matrixDouble->size - 1) {
             printf(",\n");
         }
-        printDoubleArr(&matrixDouble->arr[i]);
     }
     printf("]");
 }
 
 void freeDoubleMatrix(matrix_double* matrixDouble) {
     for (int i = 0; i < matrixDouble->size; ++i) {
-        freeDoubleArr(&matrixDouble->arr[i]);
+        free(matrixDouble->arr[i].arr);
     }
     free(matrixDouble->arr);
     free(matrixDouble);
@@ -278,7 +278,7 @@ matrix_long* scantLongMatrix(int numberOfRows, int numberOfColumns) {
     printf(">>> Start input matrix of longs:\n");
     for (int i = 0; i < numberOfRows; ++i) {
         printf("- Start enter row #%d:\n", i);
-        scanIntArr(numberOfColumns);
+        matrixLong->arr[i] = *scanLongArr(numberOfColumns);
         printf("- Finish enter row #%d:\n", i);
     }
     printf("<<< End input matrix of longs.\n");
@@ -288,17 +288,17 @@ matrix_long* scantLongMatrix(int numberOfRows, int numberOfColumns) {
 void printLongMatrix(matrix_long* matrixLong) {
     printf("[");
     for (int i = 0; i < matrixLong->size; ++i) {
+        printLongArr(&matrixLong->arr[i]);
         if (i < matrixLong->size - 1) {
             printf(",\n");
         }
-        printLongArr(&matrixLong->arr[i]);
     }
     printf("]");
 }
 
 void freeLongMatrix(matrix_long* matrixLong) {
     for (int i = 0; i < matrixLong->size; ++i) {
-        freeLongArr(&matrixLong->arr[i]);
+        free(matrixLong->arr[i].arr);
     }
     free(matrixLong->arr);
     free(matrixLong);
