@@ -78,4 +78,6 @@ void scanString(char* string) {
 //        clearStdIn();
         fflush(stdin);
     } while (strcmp("\n", string) == 0);
+    string[strcspn(string, "\n")] = 0;
 }
+

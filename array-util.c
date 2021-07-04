@@ -171,7 +171,7 @@ void freeStringArr(arr_string* arrString) {
     free(arrString->arr);
 }
 
-matrix_bool* scantBoolMatrix(int numberOfRows, int numberOfColumns) {
+matrix_bool* scanBoolMatrix(int numberOfRows, int numberOfColumns) {
     matrix_bool* matrixBool = calloc(1, sizeof(matrix_bool));
     matrixBool->arr = calloc(numberOfRows, sizeof(arr_bool));
     matrixBool->size = numberOfRows;
@@ -204,7 +204,7 @@ void freeBoolMatrix(matrix_bool* matrixBool) {
     free(matrixBool);
 }
 
-matrix_int* scantIntMatrix(int numberOfRows, int numberOfColumns) {
+matrix_int* scanIntMatrix(int numberOfRows, int numberOfColumns) {
     matrix_int* matrixInt = calloc(1, sizeof(matrix_int));
     matrixInt->arr = calloc(numberOfRows, sizeof(arr_int));
     matrixInt->size = numberOfRows;
@@ -237,7 +237,7 @@ void freeIntMatrix(matrix_int* matrixInt) {
     free(matrixInt);
 }
 
-matrix_double* scantDoubleMatrix(int numberOfRows, int numberOfColumns) {
+matrix_double* scanDoubleMatrix(int numberOfRows, int numberOfColumns) {
     matrix_double* matrixDouble = calloc(1, sizeof(matrix_double));
     matrixDouble->arr = calloc(numberOfRows, sizeof(arr_double));
     matrixDouble->size = numberOfRows;
@@ -271,7 +271,7 @@ void freeDoubleMatrix(matrix_double* matrixDouble) {
     free(matrixDouble);
 }
 
-matrix_long* scantLongMatrix(int numberOfRows, int numberOfColumns) {
+matrix_long* scanLongMatrix(int numberOfRows, int numberOfColumns) {
     matrix_long* matrixLong = calloc(1, sizeof(matrix_long));
     matrixLong->arr = calloc(numberOfRows, sizeof(arr_long));
     matrixLong->size = numberOfRows;
