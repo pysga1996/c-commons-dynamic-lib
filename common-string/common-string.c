@@ -1,7 +1,7 @@
-#include <stdlib.h>
 #include <string.h>
-#include "common-functions.h"
-#define DEFAULT_CAPACITY 50
+#include <stdlib.h>
+#include <common-utility.h>
+#include <common-array.h>
 
 int isUppercaseCharacter(char character) {
     return character >= 'A' && character <= 'Z';
@@ -30,13 +30,13 @@ int isSpecialCharacter(char character) {
     return match;
 }
 
-arr_char* createString() {
-    arr_char* arrString = malloc(sizeof(arr_char));
-    *arrString = (arr_char) {calloc(DEFAULT_CAPACITY, sizeof(char)), DEFAULT_CAPACITY };
+arr_char *createString() {
+    arr_char *arrString = malloc(sizeof(arr_char));
+    *arrString = (arr_char) {calloc(DEFAULT_CAPACITY, sizeof(char)), DEFAULT_CAPACITY};
     return arrString;
 }
 
-void concatString(arr_char* aChar, char* characters) {
+void concatString(arr_char *aChar, char *characters) {
     unsigned long long currentLength = strlen(aChar->arr);
     unsigned long long appendixLength = strlen(characters);
     unsigned long long newLength = (currentLength + appendixLength);
@@ -47,7 +47,7 @@ void concatString(arr_char* aChar, char* characters) {
     strcat(aChar->arr, characters);
 }
 
-void deleteString(arr_char* aChar) {
+void deleteString(arr_char *aChar) {
     free(aChar->arr);
     free(aChar);
 }

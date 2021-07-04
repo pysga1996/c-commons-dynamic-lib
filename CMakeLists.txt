@@ -3,5 +3,6 @@ project(common-functions C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_library(common-functions SHARED common-functions.h scan-util.c array-util.c
-        string-util.c number-util.c constants.c file-util.c)
+file(GLOB COMMON_SRC *.c *.h */*.c */*.h)
+include_directories(common-array common-matrix common-string common-number common-utility)
+add_library(common-functions SHARED ${COMMON_SRC})

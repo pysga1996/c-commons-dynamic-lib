@@ -72,7 +72,7 @@ long double scanLongDouble() {
     return strtold(tempStr, NULL);
 }
 
-void scanString(char* string) {
+void scanString(char *string) {
     do {
         fgets(string, 512, stdin);
 //        clearStdIn();

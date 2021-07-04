@@ -22,4 +22,4 @@ const int ESCAPE_KEY = 27;
 
 const int ENTER_KEY = 13;
 
-const char* SPECIAL_CHARACTERS = "!@#$%^&*()-+";
+const char *SPECIAL_CHARACTERS = "!@#$%^&*()-+";

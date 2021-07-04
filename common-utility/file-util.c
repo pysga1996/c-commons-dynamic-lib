@@ -1,12 +1,13 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <stdio.h>
-#include "common-functions.h"
+#include <common-array.h>
+#include <common-string.h>
 
-arr_char* readMenu(char* menuFileName) {
-    arr_char* menu = createString();
+arr_char *readMenu(char *menuFileName) {
+    arr_char *menu = createString();
     int c;
-    char* tmp;
+    char *tmp;
     FILE *menuPtr = fopen(menuFileName, "r");
     if (menuPtr == NULL) {
         printf("Cannot open file \n");
@@ -33,7 +34,7 @@ void readMenuNoBuffer(FILE *menuPtr) {
     }
     c = fgetc(menuPtr);
     while (c != EOF) {
-        printf ("%c", c);
+        printf("%c", c);
         c = fgetc(menuPtr);
     }
 }
