@@ -15,16 +15,16 @@ include_directories(lib/googletest/googlemock/include)
 file(GLOB_RECURSE COMMON_SRC src/*.c src/*.h)
 message(STATUS "Files are ${COMMON_SRC}")
 include_directories(src src/common-array src/common-matrix src/common-string src/common-number src/common-utility)
-add_library(common-functions SHARED ${COMMON_SRC})
+add_library(c-commons SHARED ${COMMON_SRC})
 
 file(GLOB_RECURSE COMMON_TEST test/*.cpp test/*/*.cpp)
-add_executable(common-functions-test ${COMMON_SRC} ${COMMON_TEST})
+add_executable(c-commons-test ${COMMON_SRC} ${COMMON_TEST})
 
 #Link with GoogleTest
-target_link_libraries(common-functions gtest gtest_main)
+target_link_libraries(c-commons gtest gtest_main)
 
 #Link with GoogleMock
-target_link_libraries(common-functions-test gmock gmock_main)
+target_link_libraries(c-commons-test gmock gmock_main)
 
 file(GLOB ARRAY_TEST_FILES ${CMAKE_CURRENT_SOURCE_DIR}/test/common-array/*.txt)
 file(GLOB MATRIX_TEST_FILES ${CMAKE_CURRENT_SOURCE_DIR}/test/common-matrix/*.txt)
