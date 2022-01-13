@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <common-var.h>
 #include <string.h>
-#include "common-array.h"
+#include <common-array.h>
 
 arr_long *scanLongArr(int length) {
     arr_long *arrLong = calloc(1, sizeof(arr_long));
@@ -54,6 +54,7 @@ arr_long *readLongArr(char *fileName) {
     fgets(buff, BUFFER_SIZE, fp);
     arr_long *pArrLong = convertToLongArr(buff);
     fclose(fp);
+    free(buff);
     return pArrLong;
 }
 

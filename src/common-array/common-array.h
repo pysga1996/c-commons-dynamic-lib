@@ -1,6 +1,5 @@
 #ifndef COMMON_FUNCTIONS_COMMON_ARRAY_H
 #define COMMON_FUNCTIONS_COMMON_ARRAY_H
-#define DEFAULT_CAPACITY 50
 
 typedef struct arr_char{
     char* arr;

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <common-var.h>
 #include <string.h>
-#include "common-array.h"
+#include <common-array.h>
 
 arr_int *scanIntArr(int length) {
     arr_int *arrInt = calloc(1, sizeof(arr_int));
@@ -49,6 +49,7 @@ arr_int *readIntArr(char *fileName) {
     fgets(buff, BUFFER_SIZE, fp);
     arr_int *pArrInt = convertToIntArr(buff);
     fclose(fp);
+    free(buff);
     return pArrInt;
 }
 

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <common-var.h>
 #include <string.h>
-#include "common-array.h"
+#include <common-array.h>
 
 arr_double *scanDoubleArr(int length) {
     arr_double *arrFloat = calloc(1, sizeof(arr_double));

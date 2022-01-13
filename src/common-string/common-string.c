@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <common-utility.h>
 #include <common-array.h>
+#include <common-var.h>
 
 int isUppercaseCharacter(char character) {
     return character >= 'A' && character <= 'Z';
@@ -31,9 +32,7 @@ int isSpecialCharacter(char character) {
 }
 
 arr_char *createString() {
-    arr_char *arrString = malloc(sizeof(arr_char));
-    *arrString = (arr_char) {calloc(DEFAULT_CAPACITY, sizeof(char)), DEFAULT_CAPACITY};
-    return arrString;
+    return calloc(BUFFER_SIZE, sizeof(char));
 }
 
 void concatString(arr_char *aChar, char *characters) {

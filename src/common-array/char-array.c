@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "common-array.h"
+#include <common-array.h>
 
 arr_char *scanCharArr(int length) {
     arr_char *arrChar = calloc(1, sizeof(arr_char));
