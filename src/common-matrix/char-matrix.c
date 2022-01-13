@@ -16,21 +16,21 @@ matrix_char *scanCharMatrix(int numberOfRows, int numberOfColumns) {
     return matrixChar;
 }
 
-void printCharMatrix(matrix_char *matrixChar) {
+void printCharMatrix(matrix_char *pMatrixChar) {
     printf("[");
-    for (int i = 0; i < matrixChar->size; ++i) {
-        printCharArr(&matrixChar->arr[i]);
-        if (i < matrixChar->size - 1) {
+    for (int i = 0; i < pMatrixChar->size; ++i) {
+        printCharArr(&pMatrixChar->arr[i]);
+        if (i < pMatrixChar->size - 1) {
             printf(",\n");
         }
     }
     printf("]");
 }
 
-void freeCharMatrix(matrix_char *matrixChar) {
-    for (int i = 0; i < matrixChar->size; ++i) {
-        free(matrixChar->arr[i].arr);
+void freeCharMatrix(matrix_char *pMatrixChar) {
+    for (int i = 0; i < pMatrixChar->size; ++i) {
+        free(pMatrixChar->arr[i].arr);
     }
-    free(matrixChar->arr);
-    free(matrixChar);
+    free(pMatrixChar->arr);
+    free(pMatrixChar);
 }

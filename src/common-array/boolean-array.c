@@ -24,12 +24,8 @@ arr_bool* scanBoolArr(int length) {
     return arrBool;
 }
 
-arr_bool *readBoolArr(char *fileName) {
+arr_bool *convertToBoolArr(char *buff) {
     arr_bool *pArrBool = calloc(1, sizeof(arr_bool));
-    FILE *fp;
-    char *buff = calloc(BUFFER_SIZE, sizeof(char));
-    fp = fopen(fileName, "r");
-    fgets(buff, BUFFER_SIZE, (FILE *) fp);
 //    printf("String: %s\n", buff);
     int capacity = ARRAY_CAPACITY;
     int index = 0;
@@ -42,13 +38,22 @@ arr_bool *readBoolArr(char *fileName) {
         index++;
         if (index >= capacity) {
             capacity += ARRAY_CAPACITY;
-            arr = realloc(arr, capacity);
+            arr = realloc(arr, capacity * sizeof(int));
         }
 //        printf("%s\n", token);
         token = strtok(NULL, DELIM);
     }
     pArrBool->arr = arr;
     pArrBool->size = index;
+    return pArrBool;
+}
+
+arr_bool *readBoolArr(char *fileName) {
+    FILE *fp;
+    char *buff = calloc(BUFFER_SIZE, sizeof(char));
+    fp = fopen(fileName, "r");
+    fgets(buff, BUFFER_SIZE, fp);
+    arr_bool *pArrBool = convertToBoolArr(buff);
     fclose(fp);
     free(buff);
     return pArrBool;

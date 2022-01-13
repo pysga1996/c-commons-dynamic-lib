@@ -1,4 +1,4 @@
-const int ARRAY_CAPACITY = 50;
+const int ARRAY_CAPACITY = 10;
 
 const int BUFFER_SIZE = 8192;
 

@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <common-var.h>
+#include <string.h>
 #include "common-matrix.h"
 
 matrix_double* scanDoubleMatrix(int numberOfRows, int numberOfColumns) {
@@ -17,21 +19,53 @@ matrix_double* scanDoubleMatrix(int numberOfRows, int numberOfColumns) {
     return matrixDouble;
 }
 
-void printDoubleMatrix(matrix_double* matrixDouble) {
+matrix_double *readDoubleMatrix(char *fileName) {
+    matrix_double *pMatrixDouble = calloc(1, sizeof(matrix_double));
+    FILE *fp;
+    char *buff = calloc(BUFFER_SIZE, sizeof(char));
+    fp = fopen(fileName, "r");
+    int capacity = ARRAY_CAPACITY;
+    int index = 0;
+    arr_double *arr = calloc(capacity, sizeof(arr_double));
+    while (fgets(buff, BUFFER_SIZE, fp) != NULL) {
+        // Remove trailing newline
+        buff[strcspn(buff, "\n")] = 0;
+        arr_double *pArrDouble = convertToDoubleArr(buff);
+        arr[index] = *pArrDouble;
+        index++;
+        if (index >= capacity) {
+            capacity += ARRAY_CAPACITY;
+            arr_double *arrTmp = realloc(arr, capacity * sizeof(arr_double));
+            if (arrTmp != NULL) {
+                arr = arrTmp;
+            } else {
+                printf("Cannot reallocate memory\n");
+            }
+        }
+//    printf("String: %s\n", buff);
+    }
+    pMatrixDouble->arr = arr;
+    pMatrixDouble->size = index;
+    fclose(fp);
+    free(buff);
+    return pMatrixDouble;
+}
+
+void printDoubleMatrix(matrix_double* pMatrixDouble) {
     printf("[");
-    for (int i = 0; i < matrixDouble->size; ++i) {
-        printDoubleArr(&matrixDouble->arr[i]);
-        if (i < matrixDouble->size - 1) {
+    for (int i = 0; i < pMatrixDouble->size; ++i) {
+        printDoubleArr(&pMatrixDouble->arr[i]);
+        if (i < pMatrixDouble->size - 1) {
             printf(",\n");
         }
     }
     printf("]");
 }
 
-void freeDoubleMatrix(matrix_double* matrixDouble) {
-    for (int i = 0; i < matrixDouble->size; ++i) {
-        free(matrixDouble->arr[i].arr);
+void freeDoubleMatrix(matrix_double* pMatrixDouble) {
+    for (int i = 0; i < pMatrixDouble->size; ++i) {
+        free(pMatrixDouble->arr[i].arr);
     }
-    free(matrixDouble->arr);
-    free(matrixDouble);
+    free(pMatrixDouble->arr);
+    free(pMatrixDouble);
 }

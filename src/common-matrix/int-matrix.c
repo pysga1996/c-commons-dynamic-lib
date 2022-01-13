@@ -25,20 +25,25 @@ matrix_int *readIntMatrix(char *fileName) {
     fp = fopen(fileName, "r");
     int capacity = ARRAY_CAPACITY;
     int index = 0;
-    arr_int **arr = calloc(capacity, sizeof(arr_int *));
-    while (fgets(buff, BUFFER_SIZE, (FILE *) fp) != NULL) {
+    arr_int *arr = calloc(capacity, sizeof(arr_int));
+    while (fgets(buff, BUFFER_SIZE, fp) != NULL) {
         // Remove trailing newline
         buff[strcspn(buff, "\n")] = 0;
-        arr[index] = convertToIntArr(buff);
-        printIntArr(arr[index]);
+        arr_int *pArrInt = convertToIntArr(buff);
+        arr[index] = *pArrInt;
         index++;
         if (index >= capacity) {
             capacity += ARRAY_CAPACITY;
-            arr = realloc(arr, capacity);
+            arr_int *arrTmp = realloc(arr, capacity * sizeof(arr_int));
+            if (arrTmp != NULL) {
+                arr = arrTmp;
+            } else {
+                printf("Cannot reallocate memory\n");
+            }
         }
 //    printf("String: %s\n", buff);
     }
-    pMatrixInt->arr = *arr;
+    pMatrixInt->arr = arr;
     pMatrixInt->size = index;
     fclose(fp);
     free(buff);
@@ -99,7 +104,8 @@ matrix_int *importIntMatrix(int rows, int cols, char *fileName) {
 void printIntMatrix(matrix_int *matrixInt) {
     printf("[");
     for (int i = 0; i < matrixInt->size; ++i) {
-        printIntArr(&matrixInt->arr[i]);
+        arr_int arrInt = matrixInt->arr[i];
+        printIntArr(&arrInt);
         if (i < matrixInt->size - 1) {
             printf(",\n");
         }

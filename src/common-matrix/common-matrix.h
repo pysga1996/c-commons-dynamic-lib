@@ -38,15 +38,17 @@ typedef struct matrix_double {
 
 matrix_char* scanCharMatrix(int numberOfRows, int numberOfColumns);
 
-void printCharMatrix(matrix_char* matrixChar);
+void printCharMatrix(matrix_char* pMatrixChar);
 
-void freeCharMatrix(matrix_char* matrixChar);
+void freeCharMatrix(matrix_char* pMatrixChar);
 
 matrix_bool* scanBoolMatrix(int numberOfRows, int numberOfColumns);
 
-void printBoolMatrix(matrix_bool* matrixBool);
+matrix_bool *readBoolMatrix(char *fileName);
 
-void freeBoolMatrix(matrix_bool* matrixBool);
+void printBoolMatrix(matrix_bool* pMatrixBool);
+
+void freeBoolMatrix(matrix_bool* pMatrixBool);
 
 matrix_int* scanIntMatrix(int numberOfRows, int numberOfColumns);
 
@@ -60,14 +62,26 @@ void freeIntMatrix(matrix_int* matrixInt);
 
 matrix_double* scanDoubleMatrix(int numberOfRows, int numberOfColumns);
 
-void printDoubleMatrix(matrix_double* matrixDouble);
+matrix_double *readDoubleMatrix(char *fileName);
 
-void freeDoubleMatrix(matrix_double* matrixDouble);
+void printDoubleMatrix(matrix_double* pMatrixDouble);
+
+void freeDoubleMatrix(matrix_double* pMatrixDouble);
 
 matrix_long* scanLongMatrix(int numberOfRows, int numberOfColumns);
 
-void printLongMatrix(matrix_long* matrixLong);
+matrix_long *readLongMatrix(char *fileName);
 
-void freeLongMatrix(matrix_long* matrixLong);
+void printLongMatrix(matrix_long* pMatrixLong);
+
+void freeLongMatrix(matrix_long* pMatrixLong);
+
+matrix_string *scanStringMatrix(int numberOfRows, int numberOfColumns);
+
+matrix_string *readStringMatrix(char *fileName);
+
+void printStringMatrix(matrix_string *pMatrixString);
+
+void freeStringMatrix(matrix_string *pMatrixString);
 
 #endif //COMMON_FUNCTIONS_COMMON_MATRIX_H

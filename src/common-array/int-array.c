@@ -32,7 +32,7 @@ arr_int *convertToIntArr(char *buff) {
         index++;
         if (index >= capacity) {
             capacity += ARRAY_CAPACITY;
-            arr = realloc(arr, capacity);
+            arr = realloc(arr, capacity * sizeof(int));
         }
 //        printf("%s\n", token);
         token = strtok(NULL, DELIM);
@@ -46,10 +46,10 @@ arr_int *readIntArr(char *fileName) {
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));
     fp = fopen(fileName, "r");
-    fgets(buff, BUFFER_SIZE, (FILE *) fp);
-    arr_int *pArrBool = convertToIntArr(buff);
+    fgets(buff, BUFFER_SIZE, fp);
+    arr_int *pArrInt = convertToIntArr(buff);
     fclose(fp);
-    return pArrBool;
+    return pArrInt;
 }
 
 void printIntArr(arr_int *arrInt) {

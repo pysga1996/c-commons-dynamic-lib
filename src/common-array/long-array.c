@@ -19,12 +19,8 @@ arr_long *scanLongArr(int length) {
     return arrLong;
 }
 
-arr_long *readLongArr(char *fileName) {
-    arr_long *pArrLong = calloc(1, sizeof(arr_long));
-    FILE *fp;
-    char *buff = calloc(BUFFER_SIZE, sizeof(char));
-    fp = fopen(fileName, "r");
-    fgets(buff, BUFFER_SIZE, (FILE *) fp);
+arr_long *convertToLongArr(char *buff) {
+    arr_long *pArrInt = calloc(1, sizeof(arr_long));
 //    printf("String: %s\n", buff);
     int capacity = ARRAY_CAPACITY;
     int index = 0;
@@ -32,19 +28,32 @@ arr_long *readLongArr(char *fileName) {
     char *token = strtok(buff, DELIM);
     while (token != NULL) {
         arr[index] = strtoll(token, NULL, 10);
-//        printf("%d - %s\n", index, arr[index]);
+//        printf("%d - %d\n", index, arr[index]);
         index++;
         if (index >= capacity) {
             capacity += ARRAY_CAPACITY;
-            arr = realloc(arr, capacity);
+            long long *arrTmp = realloc(arr, capacity * sizeof(long long));
+            if (arrTmp != NULL) {
+                arr = arrTmp;
+            } else {
+                printf("Cannot reallocate memory\n");
+            }
         }
 //        printf("%s\n", token);
         token = strtok(NULL, DELIM);
     }
-    pArrLong->arr = arr;
-    pArrLong->size = index;
+    pArrInt->arr = arr;
+    pArrInt->size = index;
+    return pArrInt;
+}
+
+arr_long *readLongArr(char *fileName) {
+    FILE *fp;
+    char *buff = calloc(BUFFER_SIZE, sizeof(char));
+    fp = fopen(fileName, "r");
+    fgets(buff, BUFFER_SIZE, fp);
+    arr_long *pArrLong = convertToLongArr(buff);
     fclose(fp);
-    free(buff);
     return pArrLong;
 }
 

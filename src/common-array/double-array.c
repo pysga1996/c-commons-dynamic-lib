@@ -20,12 +20,8 @@ arr_double *scanDoubleArr(int length) {
     return arrFloat;
 }
 
-arr_double *readDoubleArr(char *fileName) {
-    arr_double *pDoubleArr = calloc(1, sizeof(arr_double));
-    FILE *fp;
-    char *buff = calloc(BUFFER_SIZE, sizeof(char));
-    fp = fopen(fileName, "r");
-    fgets(buff, BUFFER_SIZE, (FILE *) fp);
+arr_double *convertToDoubleArr(char *buff) {
+    arr_double *pArrDouble = calloc(1, sizeof(arr_double));
 //    printf("String: %s\n", buff);
     int capacity = ARRAY_CAPACITY;
     int index = 0;
@@ -37,16 +33,30 @@ arr_double *readDoubleArr(char *fileName) {
         index++;
         if (index >= capacity) {
             capacity += ARRAY_CAPACITY;
-            arr = realloc(arr, capacity);
+            double *arrTmp = realloc(arr, capacity * sizeof(double));
+            if (arrTmp != NULL) {
+                arr = arrTmp;
+            } else {
+                printf("Cannot reallocate memory\n");
+            }
         }
 //        printf("%s\n", token);
         token = strtok(NULL, DELIM);
     }
-    pDoubleArr->arr = arr;
-    pDoubleArr->size = index;
+    pArrDouble->arr = arr;
+    pArrDouble->size = index;
+    return pArrDouble;
+}
+
+arr_double *readDoubleArr(char *fileName) {
+    FILE *fp;
+    char *buff = calloc(BUFFER_SIZE, sizeof(char));
+    fp = fopen(fileName, "r");
+    fgets(buff, BUFFER_SIZE, fp);
+    arr_double *pArrDouble = convertToDoubleArr(buff);
     fclose(fp);
     free(buff);
-    return pDoubleArr;
+    return pArrDouble;
 }
 
 void printDoubleArr(arr_double *arrDouble) {
