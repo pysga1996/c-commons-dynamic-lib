@@ -7,12 +7,13 @@ arr_char *scanCharArr(int length) {
     arrChar->arr = calloc(length, sizeof(char));
     arrChar->size = length;
     printf(">>> Start input array of characters:\n");
-    char tempStr[length];
+    char *tempStr = calloc(length, sizeof(char ));
     for (int i = 0; i < length; ++i) {
         printf("- Enter element #%d:\n", i);
         scanf("%s", tempStr);
         arrChar->arr[i] = (char) strtol(tempStr, NULL, 10);
     }
+    free(tempStr);
     printf("<<< End input array of characters.\n");
     return arrChar;
 }
