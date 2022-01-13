@@ -53,7 +53,7 @@ float scantFloat();
 
 long double scanLongDouble();
 
-void scanString(char* string);
+arr_char *scanString();
 
 
 /*

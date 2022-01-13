@@ -7,7 +7,7 @@ arr_char *scanCharArr(int length) {
     arrChar->arr = calloc(length, sizeof(char));
     arrChar->size = length;
     printf(">>> Start input array of characters:\n");
-    char *tempStr = calloc(length, sizeof(char ));
+    char *tempStr = calloc(length, sizeof(char));
     for (int i = 0; i < length; ++i) {
         printf("- Enter element #%d:\n", i);
         scanf("%s", tempStr);
@@ -28,9 +28,4 @@ void printCharArr(arr_char *arrChar) {
         }
     }
     printf("]");
-}
-
-void freeCharArr(arr_char *arrChar) {
-    free(arrChar->arr);
-    free(arrChar);
 }

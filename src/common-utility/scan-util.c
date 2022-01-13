@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <common-var.h>
+#include <common-array.h>
 
 void clearStdIn(void) {
     int c;
@@ -72,12 +74,17 @@ long double scanLongDouble() {
     return strtold(tempStr, NULL);
 }
 
-void scanString(char *string) {
+arr_char *scanString() {
+    arr_char *pArrChar = calloc(1, sizeof(arr_char));
+    char *string = calloc(BUFFER_SIZE, sizeof(char));
     do {
-        fgets(string, 512, stdin);
+        fgets(string, BUFFER_SIZE, stdin);
 //        clearStdIn();
         fflush(stdin);
     } while (strcmp("\n", string) == 0);
     string[strcspn(string, "\n")] = 0;
+    pArrChar->arr = string;
+    pArrChar->size = strlen(string);
+    return pArrChar;
 }
 
