@@ -1,4 +1,3 @@
-cmake-build-debug/* linguist-vendored
-lib/* linguist-vendored
-test/* linguist-vendored
 *.cpp linguist-language=C
+*.cc linguist-language=C
+*.h linguist-language=C
