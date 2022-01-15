@@ -18,7 +18,7 @@ matrix_long *scanLongMatrix(int numberOfRows, int numberOfColumns) {
     return matrixLong;
 }
 
-matrix_long *readLongMatrix(char *fileName) {
+matrix_long *importLongMatrix(char *fileName) {
     matrix_long *pMatrixInt = calloc(1, sizeof(matrix_long));
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));

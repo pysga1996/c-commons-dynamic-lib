@@ -40,7 +40,7 @@ void freeCharMatrix(matrix_char* pMatrixChar);
 
 matrix_bool* scanBoolMatrix(int numberOfRows, int numberOfColumns);
 
-matrix_bool *readBoolMatrix(char *fileName);
+matrix_bool *importBoolMatrix(char *fileName);
 
 void printBoolMatrix(matrix_bool* pMatrixBool);
 
@@ -48,9 +48,7 @@ void freeBoolMatrix(matrix_bool* pMatrixBool);
 
 matrix_int* scanIntMatrix(int numberOfRows, int numberOfColumns);
 
-matrix_int *readIntMatrix(char *fileName);
-
-matrix_int *importIntMatrix(int rows, int cols, char *fileName);
+matrix_int *importIntMatrix(char *fileName);
 
 void printIntMatrix(matrix_int* matrixInt);
 
@@ -58,7 +56,7 @@ void freeIntMatrix(matrix_int* matrixInt);
 
 matrix_double* scanDoubleMatrix(int numberOfRows, int numberOfColumns);
 
-matrix_double *readDoubleMatrix(char *fileName);
+matrix_double *importDoubleMatrix(char *fileName);
 
 void printDoubleMatrix(matrix_double* pMatrixDouble);
 
@@ -66,7 +64,7 @@ void freeDoubleMatrix(matrix_double* pMatrixDouble);
 
 matrix_long* scanLongMatrix(int numberOfRows, int numberOfColumns);
 
-matrix_long *readLongMatrix(char *fileName);
+matrix_long *importLongMatrix(char *fileName);
 
 void printLongMatrix(matrix_long* pMatrixLong);
 
@@ -74,7 +72,7 @@ void freeLongMatrix(matrix_long* pMatrixLong);
 
 matrix_string *scanStringMatrix(int numberOfRows, int numberOfColumns);
 
-matrix_string *readStringMatrix(char *fileName);
+matrix_string *importStringMatrix(char *fileName);
 
 void printStringMatrix(matrix_string *pMatrixString);
 

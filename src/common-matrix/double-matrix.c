@@ -19,7 +19,7 @@ matrix_double* scanDoubleMatrix(int numberOfRows, int numberOfColumns) {
     return matrixDouble;
 }
 
-matrix_double *readDoubleMatrix(char *fileName) {
+matrix_double *importDoubleMatrix(char *fileName) {
     matrix_double *pMatrixDouble = calloc(1, sizeof(matrix_double));
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));

@@ -18,7 +18,7 @@ matrix_bool *scanBoolMatrix(int numberOfRows, int numberOfColumns) {
     return matrixBool;
 }
 
-matrix_bool *readBoolMatrix(char *fileName) {
+matrix_bool *importBoolMatrix(char *fileName) {
     matrix_bool *pMatrixBool = calloc(1, sizeof(matrix_bool));
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));

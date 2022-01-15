@@ -42,7 +42,7 @@ arr_int *convertToIntArr(char *buff) {
     return pArrInt;
 }
 
-arr_int *readIntArr(char *fileName) {
+arr_int *importIntArr(char *fileName) {
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));
     fp = fopen(fileName, "r");

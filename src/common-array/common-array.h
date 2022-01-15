@@ -43,7 +43,7 @@ arr_bool* scanBoolArr(int length);
 
 arr_bool *convertToBoolArr(char *buff);
 
-arr_bool *readBoolArr(char *fileName);
+arr_bool *importBoolArr(char *fileName);
 
 void printBoolArr(arr_bool* arrBool);
 
@@ -53,7 +53,7 @@ arr_int* scanIntArr(int length);
 
 arr_int *convertToIntArr(char *buff);
 
-arr_int* readIntArr(char* fileName);
+arr_int* importIntArr(char* fileName);
 
 void printIntArr(arr_int* arrInt);
 
@@ -63,7 +63,7 @@ arr_double* scanDoubleArr(int length);
 
 arr_double *convertToDoubleArr(char *buff);
 
-arr_double *readDoubleArr(char *fileName);
+arr_double *importDoubleArr(char *fileName);
 
 void printDoubleArr(arr_double* arrDouble);
 
@@ -73,7 +73,7 @@ arr_long* scanLongArr(int length);
 
 arr_long *convertToLongArr(char *buff);
 
-arr_long* readLongArr(char* fileName);
+arr_long* importLongArr(char* fileName);
 
 void printLongArr(arr_long* arrLong);
 
@@ -83,7 +83,7 @@ arr_string* scanStringArr(int length);
 
 arr_string *convertToStringArr(char *buff);
 
-arr_string* readStringArr(char* fileName);
+arr_string* importStringArr(char* fileName);
 
 void printStringArr(arr_string* arrString);
 

@@ -47,7 +47,7 @@ arr_long *convertToLongArr(char *buff) {
     return pArrInt;
 }
 
-arr_long *readLongArr(char *fileName) {
+arr_long *importLongArr(char *fileName) {
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));
     fp = fopen(fileName, "r");

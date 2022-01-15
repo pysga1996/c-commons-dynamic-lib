@@ -48,7 +48,7 @@ arr_double *convertToDoubleArr(char *buff) {
     return pArrDouble;
 }
 
-arr_double *readDoubleArr(char *fileName) {
+arr_double *importDoubleArr(char *fileName) {
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));
     fp = fopen(fileName, "r");
