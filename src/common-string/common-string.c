@@ -32,7 +32,12 @@ int isSpecialCharacter(char character) {
 }
 
 arr_char *createString() {
-    return calloc(BUFFER_SIZE, sizeof(char));
+    arr_char *arrChar = calloc(1, sizeof(arr_char));
+    char *strPtr = calloc(1, sizeof(char));
+    strPtr[0] = '\0';
+    arrChar->arr = strPtr;
+    arrChar->size = 0;
+    return arrChar;
 }
 
 void concatString(arr_char *aChar, char *characters) {
@@ -40,7 +45,8 @@ void concatString(arr_char *aChar, char *characters) {
     unsigned long long appendixLength = strlen(characters);
     unsigned long long newLength = (currentLength + appendixLength);
     if (newLength > aChar->size) {
-        aChar->arr = realloc(aChar->arr, newLength * sizeof(char) + 1);
+        char *newCharPtr = realloc(aChar->arr, (newLength + 1) * sizeof(char));
+        aChar->arr = newCharPtr;
         aChar->size = newLength;
     }
     strcat(aChar->arr, characters);
