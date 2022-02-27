@@ -5,9 +5,9 @@
  * Number Utility
  */
 
-int min(int a, int b);
+int minNum(int a, int b);
 
-int max(int a, int b);
+int maxNum(int a, int b);
 
 
 #endif //COMMON_FUNCTIONS_COMMON_NUMBER_H
