@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <common-array.h>
 #include <common-string.h>
+#include "common-utility.h"
+
+#define EXIT_CODE 0
+#define CONTINUE_CODE 1
 
 arr_char *readMenu(char *menuFileName) {
     arr_char *menu = createString();
@@ -37,4 +41,29 @@ void readMenuNoBuffer(FILE *menuPtr) {
         printf("%c", c);
         c = fgetc(menuPtr);
     }
+}
+
+void processMenu(char* menuFileName, ExDemoFuncMapper exDemoFuncMapper) {
+    int command;
+    arr_char *menu = readMenu(menuFileName);
+    do {
+        printf("%s", menu->arr);
+        command = scanInt();
+        ExDemoFuncPtr funcPtr = exDemoFuncMapper(command);
+        if (funcPtr != NULL) {
+            processExercise(funcPtr);
+        }
+    } while (command != EXIT_CODE);
+    deleteString(menu);
+}
+
+void processExercise(ExDemoFuncPtr exDemoFuncPtr) {
+    int command;
+    printf(">>> Start >>>\n");
+    do {
+        exDemoFuncPtr();
+        printf("Enter 1 to continue, or any other characters to get back to the main menu:\n");
+        command = scanInt();
+    } while (command == CONTINUE_CODE);
+    printf("<<< End <<<\n\n\n");
 }
