@@ -21,7 +21,7 @@ file(GLOB_RECURSE COMMON_TEST test/*.cpp test/*/*.cpp)
 add_executable(c-commons-test ${COMMON_SRC} ${COMMON_TEST})
 
 #Link with GoogleTest
-target_link_libraries(c-commons gtest gtest_main)
+target_link_libraries(c-commons-test gtest gtest_main)
 
 #Link with GoogleMock
 target_link_libraries(c-commons-test gmock gmock_main)
