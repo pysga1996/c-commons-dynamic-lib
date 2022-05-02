@@ -45,7 +45,7 @@ arr_string *convertToStringArr(char *buff) {
     return pArrString;
 }
 
-arr_string *importStringArr(char *fileName) {
+arr_string *importStringArr(const char *fileName) {
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));
     fp = fopen(fileName, "r");

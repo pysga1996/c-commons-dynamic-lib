@@ -18,7 +18,7 @@ matrix_int *scanIntMatrix(int numberOfRows, int numberOfColumns) {
     return matrixInt;
 }
 
-matrix_int *importIntMatrix(char *fileName) {
+matrix_int *importIntMatrix(const char *fileName) {
     matrix_int *pMatrixInt = calloc(1, sizeof(matrix_int));
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));

@@ -48,7 +48,7 @@ arr_bool *convertToBoolArr(char *buff) {
     return pArrBool;
 }
 
-arr_bool *importBoolArr(char *fileName) {
+arr_bool *importBoolArr(const char *fileName) {
     FILE *fp;
     char *buff = calloc(BUFFER_SIZE, sizeof(char));
     fp = fopen(fileName, "r");
