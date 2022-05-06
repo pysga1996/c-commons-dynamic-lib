@@ -18,32 +18,75 @@ arr_string *scanStringArr(int length) {
     return arrString;
 }
 
+char *customStrTok(char **newString, const char *delimiter) {
+    char *string = *newString;
+    char *delimiterFound = (char *) 0;
+    int tokLenght = 0;
+    char *tok = (char *) 0;
+
+    if (!string) return (char *) 0;
+
+    delimiterFound = strstr(string, delimiter);
+
+    if (delimiterFound) {
+        tokLenght = delimiterFound - string;
+    } else {
+        tokLenght = strlen(string);
+    }
+
+    tok = malloc(tokLenght + 1);
+    memcpy(tok, string, tokLenght);
+    tok[tokLenght] = '\0';
+
+    *newString = delimiterFound ? delimiterFound + strlen(delimiter) : (char *) 0;
+
+    return tok;
+}
+
 arr_string *convertToStringArr(char *buff) {
     arr_string *pArrString = calloc(1, sizeof(arr_string));
     int capacity = ARRAY_CAPACITY;
     int index = 0;
     char **arr = calloc(capacity, sizeof(char *));
-    char *token = strtok(buff, DELIM);
-    while (token != NULL) {
-        arr[index] = calloc(1, sizeof(char) * strlen(token) + 1);
-        strcpy(arr[index], token);
-//        printf("%d - %s\n", index, arr[index]);
+    char **inputP = &buff;
+    char *tok;
+    while ((tok = customStrTok(inputP, DELIM))) {
+//        printf("%s\n", tok);
+        arr[index] = tok;
         index++;
-        if (index >= capacity) {
-            capacity += ARRAY_CAPACITY;
-            char **arrTmp = realloc(arr, capacity * sizeof(char *));
-            if (arrTmp != NULL) {
-                arr = arrTmp;
-            } else {
-                printf("Cannot reallocate memory\n");
-            }
-        }
-        token = strtok(NULL, DELIM);
     }
+    arr[index] = '\0';
     pArrString->arr = arr;
     pArrString->size = index;
     return pArrString;
 }
+
+//arr_string *convertToStringArr(char *buff) {
+//    arr_string *pArrString = calloc(1, sizeof(arr_string));
+//    int capacity = ARRAY_CAPACITY;
+//    int index = 0;
+//    char **arr = calloc(capacity, sizeof(char *));
+//    char *token = strtok(buff, DELIM);
+//    while (token != NULL) {
+//        arr[index] = calloc(1, sizeof(char) * strlen(token) + 1);
+//        strcpy(arr[index], token);
+////        printf("%d - %s\n", index, arr[index]);
+//        index++;
+//        if (index >= capacity) {
+//            capacity += ARRAY_CAPACITY;
+//            char **arrTmp = realloc(arr, capacity * sizeof(char *));
+//            if (arrTmp != NULL) {
+//                arr = arrTmp;
+//            } else {
+//                printf("Cannot reallocate memory\n");
+//            }
+//        }
+//        token = strtok(NULL, DELIM);
+//    }
+//    pArrString->arr = arr;
+//    pArrString->size = index;
+//    return pArrString;
+//}
 
 arr_string *importStringArr(const char *fileName) {
     FILE *fp;
