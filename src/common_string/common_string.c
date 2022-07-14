@@ -1,8 +1,8 @@
 #include <string.h>
 #include <stdlib.h>
-#include <common-utility.h>
-#include <common-array.h>
-#include <common-var.h>
+#include <common_utility.h>
+#include <common_array.h>
+#include <common_var.h>
 
 int isUppercaseCharacter(char character) {
     return character >= 'A' && character <= 'Z';

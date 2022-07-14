@@ -14,7 +14,7 @@ include_directories(lib/googletest/googlemock/include)
 
 file(GLOB_RECURSE COMMON_SRC src/*.c src/*.h)
 message(STATUS "Files are ${COMMON_SRC}")
-include_directories(src src/common-array src/common-matrix src/common-string src/common-number src/common-utility)
+include_directories(src src/common_array src/common_matrix src/common_string src/common_number src/common_utility)
 add_library(c-commons SHARED ${COMMON_SRC})
 
 file(GLOB_RECURSE COMMON_TEST test/*.cpp test/*/*.cpp)

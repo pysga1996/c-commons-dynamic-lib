@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <common-var.h>
+#include <common_var.h>
 #include <string.h>
-#include <common-array.h>
+#include <common_array.h>
 
 arr_int *scanIntArr(int length) {
     arr_int *arrInt = calloc(1, sizeof(arr_int));

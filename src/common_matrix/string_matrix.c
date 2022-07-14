@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <common-var.h>
+#include <common_var.h>
 #include <string.h>
-#include "common-matrix.h"
+#include "common_matrix.h"
 
 matrix_string *scanStringMatrix(int numberOfRows, int numberOfColumns) {
     matrix_string *pMatrixString = calloc(1, sizeof(matrix_string));

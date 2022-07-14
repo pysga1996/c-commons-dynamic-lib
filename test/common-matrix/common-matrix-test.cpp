@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 extern "C" {
-#include <common-matrix.h>
+#include <common_matrix.h>
 }
 
 TEST(CommonMatrix, BoolMatrixTest) {

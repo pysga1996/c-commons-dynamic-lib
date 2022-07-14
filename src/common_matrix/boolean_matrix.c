@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <common-var.h>
+#include <common_var.h>
 #include <string.h>
-#include "common-matrix.h"
+#include "common_matrix.h"
 
 matrix_bool *scanBoolMatrix(int numberOfRows, int numberOfColumns) {
     matrix_bool *matrixBool = calloc(1, sizeof(matrix_bool));

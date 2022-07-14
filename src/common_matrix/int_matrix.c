@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <common-var.h>
-#include "common-matrix.h"
+#include <common_var.h>
+#include "common_matrix.h"
 
 matrix_int *scanIntMatrix(int numberOfRows, int numberOfColumns) {
     matrix_int *matrixInt = calloc(1, sizeof(matrix_int));

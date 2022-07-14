@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <stdio.h>
-#include <common-array.h>
-#include <common-string.h>
-#include "common-utility.h"
+#include <common_array.h>
+#include <common_string.h>
+#include "common_utility.h"
 
 #define EXIT_CODE 0
 #define CONTINUE_CODE 1

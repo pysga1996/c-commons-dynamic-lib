@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <common-var.h>
-#include <common-array.h>
+#include <common_var.h>
+#include <common_array.h>
 
 void clearStdIn(void) {
     int c;

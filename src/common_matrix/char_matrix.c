@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "common-matrix.h"
+#include "common_matrix.h"
 
 matrix_char *scanCharMatrix(int numberOfRows, int numberOfColumns) {
     matrix_char *matrixChar = calloc(1, sizeof(matrix_char));
